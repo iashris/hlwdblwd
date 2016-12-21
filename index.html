@@ -117,11 +117,9 @@ padding:0 12vw;
 			padding-top:0;
 		}
 		.mainbar{
-			top:20vh;
-
-		}
+			top:15vh;		}
 		#filmnam{
-			margin-top: 15vh;
+			margin-top: 11vh;
 			line-height: 1.4em;
 		}
 		#mobile{
@@ -275,7 +273,8 @@ SCORE=0;
 LIVES=0;
 function newgame(fim,keyobj){
 	k=keyobj;
-	$('.keyhere').css('background','white');
+		
+$('.keyhere').unbind('click');$('.keyhere').css('background','white');
 	$('.keyhere').on('click',function(e){
 	console.log('cfgdf');
 	updatetxt(e.target.innerHTML.toLowerCase());
