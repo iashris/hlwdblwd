@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hollywood Bollywood</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+</head>
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Roboto+Mono" rel="stylesheet">
+<style type="text/css">
+html,body{
+	margin: 0;padding: 0;
+	background: #24212B;
+	color:#CAEEEF !important;
+	font-family: Roboto Mono;
+	overflow: hidden;
+}
+.navbar{
+	border-radius:0;
+	border:0;
+	background-color: #24212B;
+		padding:10px 0px;
+}
+.vvv{
+	color:#f64040;
+	font-size: 1.3em;
+}
+.navbar-brand{
+	margin-left:10vw;
+}
+	footer{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		background: #2e2c33;
+		height: 8vh;
+	}
+.col-xs-3{
+	text-align: center !important;
+	margin-top: 2vh;
+	font-size: 0.8em;
+
+
+}
+#infoarea{
+	margin-left: 0.8vw;
+}
+	.mainbar{
+	text-align: center;
+	text-transform: uppercase;
+	top:30vh;
+	clear: both;
+	
+	}
+.modal{
+	text-transform: none;
+	color:#222;
+	font-family: Roboto Mono;
+	font-size: 0.9em;
+}
+.modal>img{
+	text-align: center;
+}
+	ul{
+		list-style: none;
+		float: right;
+
+	}
+	h4{
+
+		display: inline;
+
+	}
+	button{
+		color:white;
+	}
+	img{
+		width: 100%;
+	}
+	li{
+		float: left;
+		margin-right: 4vw;
+	}
+	#filmnam{
+		font-family: Anonymous Pro;
+	font-size: 1.7em;
+	text-align: center;
+	letter-spacing: 0.3em;
+	word-spacing:0.8em;
+	line-height: 2em;
+	margin-top: 30vh;
+	margin-bottom: 10vh;
+	}
+	#hintarea{
+		text-align: center;
+	}
+#mobile{
+	text-align: center;
+display: none;
+margin-top: 4vh;
+padding:0 12vw;
+}
+.keyhere{
+	margin-top: 1.5vh;
+	color:#222;
+	background: white;
+	width: 7vw;
+	height: 7vw;
+	border-radius:2px;
+	display: inline-block;
+}
+.consonants{
+	margin-top: 4vw;
+}
+
+	@media (max-width: 600px) {
+		html,body{
+			padding-top:0;
+		}
+		.mainbar{
+			top:20vh;
+
+		}
+		#filmnam{
+			margin-top: 15vh;
+			line-height: 1.4em;
+		}
+		#mobile{
+			display: block;
+		}
+  }
+}
+}
+
+</style>
+<body>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="myModalLabel">SOLUTION</h4>
+      </div>
+      <div class="modal-body" id="answerpart">
+
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">HLWD BLWD</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+  
+      <ul class="nav navbar-nav navbar-right">
+     	 <li><a href="#"></span>Game</a></li>
+        <li><a href="#"></span>Leaderboard</a></li>
+        <li><a href="#"></span>About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+<div class="container">
+
+
+
+
+<div class="mainbar" >
+<div class="col-md-12" id="filmnam"></div>
+
+<div class="col-md-12 row" id="hintarea"></div>
+
+<div class="col-md-12 row" id="mobile">
+<div class="vowels">
+<div class="keyhere" data-key="a">A</div>
+<div class="keyhere" data-key="e">E</div>
+<div class="keyhere" data-key="i">I</div>
+<div class="keyhere" data-key="o">O</div>
+<div class="keyhere" data-key="u">U</div>
+</div>
+<div class="consonants">
+<div class="keyhere" data-key="b">B</div>
+<div class="keyhere" data-key="c">C</div>
+<div class="keyhere" data-key="d">D</div>
+<div class="keyhere" data-key="f">F</div>
+<div class="keyhere" data-key="g">G</div>
+<div class="keyhere" data-key="h">H</div>
+<div class="keyhere" data-key="j">J</div>
+<div class="keyhere" data-key="k">K</div>
+<div class="keyhere" data-key="l">L</div>
+<div class="keyhere" data-key="m">M</div>
+<div class="keyhere" data-key="n">N</div>
+<div class="keyhere" data-key="p">P</div>
+<div class="keyhere" data-key="q">Q</div>
+<div class="keyhere" data-key="r">R</div>
+<div class="keyhere" data-key="s">S</div>
+<div class="keyhere" data-key="t">T</div>
+<div class="keyhere" data-key="v">V</div>
+<div class="keyhere" data-key="w">W</div>
+<div class="keyhere" data-key="x">X</div>
+<div class="keyhere" data-key="y">Y</div>
+<div class="keyhere" data-key="z">Z</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+<footer>
+<div class="row">
+<div class="col-xs-3">
+<span>LIVES</span>
+<span class="vvv" id="hrtz"></span>
+</div>
+
+<div class="col-xs-3">
+<span>LEVEL</span>
+<span class="vvv" id="lvl"></span>
+</div>
+
+<div class="col-xs-3">
+<span class="vvv" id="scr">0</span>
+<span> pts</span>
+</div>
+
+<div class="col-xs-3">
+<span class="vvv" style="margin-right:4vw">&lt;/iashris></span>
+</div>
+
+
+</footer>
+</body>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="48nygu7Yyh.js"></script>
+<script type="text/javascript">
+
+
+
+var level=1;
+initnewgame(level);
+
+function initnewgame(level){
+
+var film=YUYFIG85nU95j[Math.floor(Math.random()*194)];
+var url=encodeURI('http://www.omdbapi.com/?t='+film+'&y=&plot=short&r=json');
+	$.ajax({
+                    url: url,
+                    dataType: 'jsonp',
+                    success: function(dataWeGotViaJsonp){
+                        newgame(film.toLowerCase(),dataWeGotViaJsonp);
+                        
+                    }
+                });
+}
+SCORE=0;
+LIVES=0;
+function newgame(fim,keyobj){
+	k=keyobj;
+	$('.keyhere').css('background','white');
+	$('.keyhere').on('click',function(e){
+	console.log('cfgdf');
+	updatetxt(e.target.innerHTML.toLowerCase());
+	$(e.target).css("background","#f64040");
+	$(e.target).unbind("click");
+});
+
+
+
+nextcue= fim;//clue
+console.log(nextcue);
+console.log('and in continuation',keyobj);
+
+saidletters='.!-&'; //record of user responses
+updated='';
+var reg=new RegExp('[^'+saidletters+' ]',"g"); 
+filmnam.innerHTML=nextcue.replace(reg,'_');
+updatescore();
+updatelives(5);
+updatelevel();
+//hint provide
+if(k.Genre){
+var hintsec=['Genre','Actors','Year'];
+var chosenhint=hintsec[Math.floor(3*Math.random())];
+hintarea.innerHTML=chosenhint+': '+k[chosenhint]+'<br>IMDB Rating: '+k.imdbRating;
+}
+}
+function updatescore(){
+	SCORE+=(level-1)*3*(LIVES||0);
+	scr.innerHTML=SCORE;
+}
+function updatelives(n){
+LIVES=n;
+	hrtz.innerHTML=n;
+}
+function updatelevel(){
+	lvl.innerHTML=level;
+
+}
+function updatetxt(letter){
+
+	saidletters+=letter;
+	var reg=new RegExp('[^'+saidletters+' ]',"g"); //construct the matcher
+	updated=nextcue.replace(reg,'_'); //answer.replace
+	if(updated==filmnam.innerHTML){
+	LIVES--;
+	if(LIVES<0){
+
+		losegame();
+	}
+	else{
+	updatelives(LIVES);
+}
+	}
+	else{
+		filmnam.innerHTML=updated;
+	}
+	if(filmnam.innerHTML==nextcue){
+		wingame();
+	}
+
+}
+
+document.addEventListener('keydown',function(e){ //if a valid alphabet and not in said letters, update
+	if('abcdefghijklmnopqrstuvwxyz1234567890.!-&'.indexOf(e.key)!=-1 && saidletters.indexOf(e.key)==-1){
+		updatetxt(e.key);
+	}
+
+
+});
+
+
+function wingame(){
+
+		level++;
+		myModalLabel.innerHTML="RIGHT ANSWER!";
+			if(k.Plot){
+					answerpart.innerHTML='<div class="container col-md-12"><div class="row"><div class="col-md-6"><img src="'+k.Poster+'"/></div><div class="col-md-6"><br>Movie: '+k.Title+'<br>Year: '+k.Year+'<br>Genre: '+k.Genre+'<br>IMDB Rating: '+k.imdbRating+'<br> Actors: '+k.Actors+'<br> Plot: '+k.Plot+"</div></div></div>";
+	}
+	 else{
+	answerpart.innerHTML=nextcue;
+	}
+	$('#myModal').modal('show');	
+	initnewgame(level);
+}
+
+
+function losegame(){
+		myModalLabel.innerHTML="GAME OVER!";
+		if(k.Plot){
+					answerpart.innerHTML='<div class="container col-md-12"><div class="row"><div class="col-md-6"><img src="'+k.Poster+'"/></div><div class="col-md-6"><br>Movie: '+k.Title+'<br>Year: '+k.Year+'<br>Genre: '+k.Genre+'<br>IMDB Rating: '+k.imdbRating+'<br> Actors: '+k.Actors+'<br> Plot: '+k.Plot+"</div></div></div>";
+	}
+	else{
+		answerpart.innerHTML=nextcue;
+	}
+	$('#myModal').modal('show');
+	initnewgame(1);
+level=1;
+
+
+}
+
+
+
+
+
+
+</script>
+</html>
