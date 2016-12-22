@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Hollywood Bollywood</title>
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<meta name="viewport" content="initial-scale=1, user-scalable=no"/>
 </head>
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro|Roboto+Mono" rel="stylesheet">
@@ -37,9 +37,7 @@ html,body{
 .col-xs-3{
 	text-align: center !important;
 	margin-top: 2vh;
-	font-size: 0.8em;
-
-
+	font-size: 0.65em;
 }
 #infoarea{
 	margin-left: 0.8vw;
@@ -117,9 +115,9 @@ padding:0 12vw;
 			padding-top:0;
 		}
 		.mainbar{
-			top:15vh;		}
+			top:11vh;		}
 		#filmnam{
-			margin-top: 11vh;
+			margin-top: 9vh;
 			line-height: 1.4em;
 		}
 		#mobile{
@@ -284,11 +282,8 @@ $('.keyhere').unbind('click');$('.keyhere').css('background','white');
 
 
 
-nextcue= fim;//clue
-console.log(nextcue);
-console.log('and in continuation',keyobj);
-
-saidletters='.!-&'; //record of user responses
+nextcue= fim;//clue 
+saidletters='.!1234567890:--&'; //record of user responses
 updated='';
 var reg=new RegExp('[^'+saidletters+' ]',"g"); 
 filmnam.innerHTML=nextcue.replace(reg,'_');
