@@ -283,7 +283,7 @@ $('.keyhere').unbind('click');$('.keyhere').css('background','white');
 
 
 nextcue= fim;//clue 
-saidletters='.!1234567890:--&'; //record of user responses
+saidletters='.!&-'; //record of user responses
 updated='';
 var reg=new RegExp('[^'+saidletters+' ]',"g"); 
 filmnam.innerHTML=nextcue.replace(reg,'_');
@@ -366,10 +366,9 @@ function losegame(){
 		answerpart.innerHTML=nextcue;
 	}
 	$('#myModal').modal('show');
-	initnewgame(1);
-level=1;
-
-
+		
+initnewgame(1);
+level=1;SCORE=  0;
 }
 
 
