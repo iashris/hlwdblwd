@@ -264,25 +264,15 @@
   <script type="text/javascript" src="48nygu7Yyh.js"></script>
   <script type="text/javascript">
     var level = 1;
+    SCORE = 0;
+    LIVES = 0;
     initnewgame(level);
     function initnewgame(level) {
       var film = YUYFIG85nU95j[Math.floor(Math.random() * 194)];
       newgame(film);
-    //   var url = encodeURI(
-    //     "http://www.omdbapi.com/?t=" + film + "&y=&plot=short&r=json"
-    //   );
-    //   $.ajax({
-    //     url: url,
-    //     dataType: "jsonp",
-    //     success: function(dataWeGotViaJsonp) {
-    //       newgame(film.toLowerCase(), dataWeGotViaJsonp);
-    //     }
-    //   });
     }
-    SCORE = 0;
-    LIVES = 0;
-    function newgame(fim) {
 
+    function newgame(fim) {
       $(".keyhere").unbind("click");
       $(".keyhere").css("background", "white");
       $(".keyhere").on("click", function(e) {
