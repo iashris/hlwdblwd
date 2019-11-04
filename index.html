@@ -267,21 +267,21 @@
     initnewgame(level);
     function initnewgame(level) {
       var film = YUYFIG85nU95j[Math.floor(Math.random() * 194)];
-      var url = encodeURI(
-        "http://www.omdbapi.com/?t=" + film + "&y=&plot=short&r=json"
-      );
-      $.ajax({
-        url: url,
-        dataType: "jsonp",
-        success: function(dataWeGotViaJsonp) {
-          newgame(film.toLowerCase(), dataWeGotViaJsonp);
-        }
-      });
+      newgame(film);
+    //   var url = encodeURI(
+    //     "http://www.omdbapi.com/?t=" + film + "&y=&plot=short&r=json"
+    //   );
+    //   $.ajax({
+    //     url: url,
+    //     dataType: "jsonp",
+    //     success: function(dataWeGotViaJsonp) {
+    //       newgame(film.toLowerCase(), dataWeGotViaJsonp);
+    //     }
+    //   });
     }
     SCORE = 0;
     LIVES = 0;
-    function newgame(fim, keyobj) {
-      k = keyobj;
+    function newgame(fim) {
 
       $(".keyhere").unbind("click");
       $(".keyhere").css("background", "white");
@@ -292,8 +292,7 @@
         $(e.target).unbind("click");
       });
       nextcue = fim; //clue
-      console.log(nextcue);
-      console.log("and in continuation", keyobj);
+
       saidletters = ".!-&"; //record of user responses
       updated = "";
       var reg = new RegExp("[^" + saidletters + " ]", "g");
@@ -302,16 +301,16 @@
       updatelives(5);
       updatelevel();
       //hint provide
-      if (k.Genre) {
-        var hintsec = ["Genre", "Actors", "Year"];
-        var chosenhint = hintsec[Math.floor(3 * Math.random())];
-        hintarea.innerHTML =
-          chosenhint +
-          ": " +
-          k[chosenhint] +
-          "<br>IMDB Rating: " +
-          k.imdbRating;
-      }
+    //   if (k.Genre) {
+    //     var hintsec = ["Genre", "Actors", "Year"];
+    //     var chosenhint = hintsec[Math.floor(3 * Math.random())];
+    //     hintarea.innerHTML =
+    //       chosenhint +
+    //       ": " +
+    //       k[chosenhint] +
+    //       "<br>IMDB Rating: " +
+    //       k.imdbRating;
+    //   }
     }
     function updatescore() {
       SCORE += (level - 1) * 3 * (LIVES || 0);
@@ -354,54 +353,55 @@
     function wingame() {
       level++;
       myModalLabel.innerHTML = "RIGHT ANSWER!";
-      if (k.Plot) {
-        answerpart.innerHTML =
-          '<div class="container col-md-12"><div class="row"><div class="col-md-6"><img src="' +
-          k.Poster +
-          '"/></div><div class="col-md-6"><br>Movie: ' +
-          k.Title +
-          "<br>Year: " +
-          k.Year +
-          "<br>Genre: " +
-          k.Genre +
-          "<br>IMDB Rating: " +
-          k.imdbRating +
-          "<br> Actors: " +
-          k.Actors +
-          "<br> Plot: " +
-          k.Plot +
-          "</div></div></div>";
-      } else {
-        answerpart.innerHTML = nextcue;
-      }
+    //   if (k.Plot) {
+    //     answerpart.innerHTML =
+    //       '<div class="container col-md-12"><div class="row"><div class="col-md-6"><img src="' +
+    //       k.Poster +
+    //       '"/></div><div class="col-md-6"><br>Movie: ' +
+    //       k.Title +
+    //       "<br>Year: " +
+    //       k.Year +
+    //       "<br>Genre: " +
+    //       k.Genre +
+    //       "<br>IMDB Rating: " +
+    //       k.imdbRating +
+    //       "<br> Actors: " +
+    //       k.Actors +
+    //       "<br> Plot: " +
+    //       k.Plot +
+    //       "</div></div></div>";
+    //   } else {
+    //     answerpart.innerHTML = nextcue;
+    //   }
       $("#myModal").modal("show");
       initnewgame(level);
     }
     function losegame() {
       myModalLabel.innerHTML = "GAME OVER!";
-      if (k.Plot) {
-        answerpart.innerHTML =
-          '<div class="container col-md-12"><div class="row"><div class="col-md-6"><img src="' +
-          k.Poster +
-          '"/></div><div class="col-md-6"><br>Movie: ' +
-          k.Title +
-          "<br>Year: " +
-          k.Year +
-          "<br>Genre: " +
-          k.Genre +
-          "<br>IMDB Rating: " +
-          k.imdbRating +
-          "<br> Actors: " +
-          k.Actors +
-          "<br> Plot: " +
-          k.Plot +
-          "</div></div></div>";
-      } else {
-        answerpart.innerHTML = nextcue;
-      }
+    //   if (k.Plot) {
+    //     answerpart.innerHTML =
+    //       '<div class="container col-md-12"><div class="row"><div class="col-md-6"><img src="' +
+    //       k.Poster +
+    //       '"/></div><div class="col-md-6"><br>Movie: ' +
+    //       k.Title +
+    //       "<br>Year: " +
+    //       k.Year +
+    //       "<br>Genre: " +
+    //       k.Genre +
+    //       "<br>IMDB Rating: " +
+    //       k.imdbRating +
+    //       "<br> Actors: " +
+    //       k.Actors +
+    //       "<br> Plot: " +
+    //       k.Plot +
+    //       "</div></div></div>";
+    //   } else {
+    //     answerpart.innerHTML = nextcue;
+    //   }
       $("#myModal").modal("show");
       initnewgame(1);
       level = 1;
     }
   </script>
 </html>
+
